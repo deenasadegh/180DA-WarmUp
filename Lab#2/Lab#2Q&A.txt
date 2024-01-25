@@ -1,0 +1,49 @@
+Deena D Sadegh
+ECE 180DA Lab #2
+21st, Janruary 2024
+
+1. Consider how to use MQTT for the project. Based on your experiences, what is made possible using MQTT? What seems fairly difficult using MQTT? If you were to use MQTT, what would be a
+reasonable communications lag time be? Would you prefer to use a different method of transmitting
+data?
+
+
+ANS: MQTT makes efficient and reliable device-to-device or system-to-system communication possible, especially suited for IoT applications. Handling communication lag, ensuring message delivery reliability, and scaling for many participants can be challenging with MQTT. A reasonable communications lag time for MQTT typically ranges from milliseconds to a few seconds, depending on network conditions and message complexity. The choice of data transmission method, including MQTT, depends on project requirements, with alternatives like WebSockets or custom protocols considered for specific needs. The provided MQTT ping-pong example involves a publisher and a subscriber, with the publisher sending ping messages to the MQTT broker, and the subscriber printing received messages, demonstrating two-way communication. Expanding a communication task from two to four participants using MQTT can increase complexity in managing connections, message routing, and coordinating communication, while communication lag and scalability concerns become more critical with a larger group.
+
+please note that sentence structure was formulated using chatgpt. 
+
+
+2. Try more similar sounding words (particularly bad examples may be words like “sound” and
+“found”, letters (A, B, C , D, E, F, G). Does the performance start taking a hit?
+
+ANS: I found that is is pretty accurate but has an issue with words that sound similar. The software especially has a hard time being accurate if similar sounding words are said in succession with poor enunciation. A higher error rate may accure because words may be harder to distinguish. 
+
+
+• Phrases. How long of a phrase can work? Is the length of a phrase actually a good thing for
+“error correction”?
+
+ANS: When the phrase length increases, the error rate also increases. Phrases in the length of 4-5 seconds tend to be less accurate when there is also random noise being picked up in the background. 
+
+• Play music in the background. Go to a coffee shop (or work in the lab). How well does it work in
+noise? What are ways to improve its performance in noise?
+
+ANS: In a loud public setting, my apartment's kitchen with my four roommates, the software's performance degrades and degrades even more when phrases are longer in length. I found that using a state of the art high quaility microphone with some sort of filter to cancel background noise help improves performance. In my case I used my airpod pros (the latest generation). furthermore, adding lines in the code like: adjust_for_ambient_noise() can help with the accuracy. 
+
+
+(a) What can you do with your given speech program in the project?
+
+ANS: In our project, the speech program can be used for voice commands and interactions with in-game characters, enhancing player engagement.
+
+(b) How complex do you want your speech recognition to be? How complex can you reasonably expect
+your speech recognition to be?
+
+ANS:  We aim for moderately complex speech recognition capabilities, understanding common phrases and game-specific commands, but expect limitations in handling complex sentences or obscure words.
+
+(c) What level of speech accuracy do you need? In other words, how quickly do you need an accurate
+recognition? Does a missed recognition hurt the progress of the game?
+
+ANS: We require near-instantaneous speech recognition to maintain gameplay flow, with missed recognitions potentially impacting player progression.
+
+(d) Do you need specific hardware, specific conditions, etc. to have a reasonable confidence that it
+works well enough?
+
+ANS: Specific hardware, such as high-quality microphones, may be necessary for optimal performance, and controlling background noise in noisy environments will be essential for accurate recognition.
