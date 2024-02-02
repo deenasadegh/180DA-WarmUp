@@ -1,0 +1,18 @@
+Deena D Sadegh
+ECE 180DA Lab #2
+31st, Janruary 2024
+
+1. Please submit a screenshot of you playing your command-line game and your PyGame game with
+another person.
+
+ANS: Proof of gameplay is located on my personal github under the lab#3 folder. There will be multiple .png files with the word "proof" somewhere in its name. 
+
+2. Try reading a bit on one other GUI library. Sometimes you don’t need a full game loop interface to
+implement the games that we are working on, so you can try an easier (or more flexible) interface.
+
+ANS: I choose to read about Tkinter. Tkinter is a standard GUI library for Python that provides a simple way to create GUI applications. The good thing is that it is included with most Python installations, so there's no need to install anything extra to get started. Tkinter applications are built around a window-centric approach where you add components like buttons, labels, and canvases to create your interface. It's particularly well-suited for small to medium-sized GUI applications and can be a great choice for simple games or utility apps.
+
+3. Describe in a short blurb how you think you want to do graphics for your project.
+
+ANS: 
+For the graphics component of our project, we're considering using Unity due to its robust set of features that cater to both 2D and 3D game development. Unity's advanced rendering capabilities, including support for dynamic lighting, shadows, and various special effects, would allow us to create a visually appealing and immersive experience for the users. Futhermore, Unity supports scripting in C#, it offers a powerful and flexible programming environment for implementing game logic, physics, and interaction mechanics. I would like to learn Unity as I feel that is another major skill set needed for the workforce. 
