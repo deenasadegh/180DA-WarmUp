@@ -1,0 +1,45 @@
+Deena Sadegh 
+605974149
+ECE 180DA W24
+
+
+Task #1 
+
+Q3: Code was used from Example 1 of the built in arduino IMU library examples.
+
+
+Task #3 
+
+Q2: Observing the latency, it's noticeable that there's a delay of around one to a few seconds when transmitting messages via MQTT. To mitigate this lag, one strategy involves optimizing the program to streamline its size and sending messages less frequently, thus alleviating network congestion. Additionally, employing a swifter broker can contribute to reducing latency. Another approach to tackling the lag is by implementing processing directly on the IMU itself. By configuring the IMU to trigger a single message transmission only when it recognizes a specific event or condition, rather than continuously sending updates, the amount of data transmitted can be significantly reduced, consequently minimizing latency. Furthermore, in situations where some degree of latency is unavoidable, it's essential to explore alternative methods to mitigate its impact. This may involve prioritizing critical data transmission, implementing buffering mechanisms, or optimizing network infrastructure to handle fluctuations in traffic more efficiently.
+
+Sentence Structure provided by ChatGPT
+
+
+Task #4 
+
+Q1: The accelerometer in the IMU detects how much the device is moving. When the IMU moves, the accelerometer shows a change in magnitude. The sign of the accelerometer tells us which direction the IMU is moving. For example, moving the IMU upwards will give positive values on the z-axis. The gyroscopic values indicate how the IMU is rotating around its three different axes. When the IMU is at rest, positioned similarly to the ESP with the blinking light facing downwards, the accelerometer readings for the x and y axes are close to zero. However, the z-axis consistently displays values between -900 and -1000 milligravities (mg). To distinguish between idle and non-idle states, we can focus on the stability of the accelerometer readings. A confusion matrix is used to assess how accurately the classification model identifies idle and non-idle states.
+
+
+Q2: When the IMU is not moving, the x and y positions of the accelerometer are at 0, while the z-axis reads between 900 to 1000 mg. When the red LED is facing upwards, the gyroscopic values are around 0.  During movement, the gyroscopic values go up, but when it stops, they return close to 0. Even when the IMU is not moving, the values may shift a bit, but it's not a big deal. A good way to tell if the IMU is idle or not might be to see if the accelerometer or gyroscopic values change a lot over a short time. To tell if an experiment is idle or not, we can look at the data from the accelerometer and gyroscopic sensors. Then, we can see how accurate our classification is by making a confusion matrix. This will show us how many experiments were correctly identified as idle or not, and how many were not.
+
+Q3: To differentiate between forward push, upward lift, and no action, I built a simple classifier using accelerometer data as features. Specifically, I used the mean acceleration along the x-axis for detecting forward push and the mean acceleration along the z-axis for detecting upward lift.
+
+For the classification, I employed a decision tree model due to its straightforward structure and ease of interpretation.
+
+I incorporated this classifier by:
+
+- Collecting accelerometer data from the IMU.
+- Calculating the mean acceleration along the x-axis and z-axis.
+- Using a decision tree algorithm or implementing if-else statements to classify the action based on the calculated features.
+- Comparing the model's performance with that of my teammates by recording and analyzing the classifications made.
+- This approach allows for effective differentiation between the specified actions and no action based on accelerometer data, facilitating better understanding and control of the IMU's behavior.
+
+Q4: To classify three actions (forward push, upward lift, circular rotation) plus an idle state, the same features used previously may not be sufficient, especially for detecting circular rotation. While mean accelerations along specific axes are suitable for detecting linear movements like forward push and upward lift, they may not effectively capture the complex motion of circular rotation.
+
+To track circular rotation motion using an IMU, additional features are required, such as:
+
+- Angular velocity: Measuring the rate of change of orientation over time can provide insights into rotational motion. High angular velocity values along multiple axes may indicate circular rotation.
+- Gyroscopic data: Utilizing gyroscopic readings, particularly variations in angular velocity along different axes, can help detect rotational movements more accurately.
+- Magnitude of acceleration vector: Examining the overall acceleration magnitude irrespective of direction can help identify movements with circular components, as circular motion involves continuous acceleration changes.
+
+While circular rotation may pose challenges for classification due to its complexity, actions like forward push and upward lift are more straightforward to track using traditional accelerometer-based features. Linear movements are easier to detect because they primarily involve changes in acceleration along specific axes, making them simpler to classify compared to complex rotational motions.
