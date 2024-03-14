@@ -1,0 +1,36 @@
+Deena Sadegh 
+605974149
+ECE 180DA W24
+
+
+Task #1 
+
+Q3: Code was used from Example 1 of the built in arduino IMU library examples.
+
+
+Task #3 
+
+Q2: Observing the latency, it's noticeable that there's a delay of around one to a few seconds when transmitting messages via MQTT. To mitigate this lag, one strategy involves optimizing the program to streamline its size and sending messages less frequently, thus alleviating network congestion. Additionally, employing a swifter broker can contribute to reducing latency. Another approach to tackling the lag is by implementing processing directly on the IMU itself. By configuring the IMU to trigger a single message transmission only when it recognizes a specific event or condition, rather than continuously sending updates, the amount of data transmitted can be significantly reduced, consequently minimizing latency. Furthermore, in situations where some degree of latency is unavoidable, it's essential to explore alternative methods to mitigate its impact. This may involve prioritizing critical data transmission, implementing buffering mechanisms, or optimizing network infrastructure to handle fluctuations in traffic more efficiently.
+
+Sentence Structure provided by ChatGPT
+
+
+Task #4 
+
+Q1:  Slight variations in gravitational acceleration may occur when in the idle state. 
+
+
+Q2: Minor drift might occur. The idle state is characterized by the magnitude of all three axis together. When it meets or exceeds that threshold the non-idle state occurs. 8/10 idle experiments were correctly defined as idle. TP=8, 2 idle experiments were incorrectly defined as nonidle. FN=2. 9/10 nonidle experiments were correctly identified as nonidle. TN=9. 1 nonidle experiment was incorrectly identified as idle. FP = 1. The confusion matrix image is under the "Tasks Proof" folder in my GITrepoEnv labeled as "confusion_matrix". The accuracy of the classification algorithm is 8 + 98 + 9 + 1 + 2 = 0.85 or 85%. 
+
+Q3: For the classification task of discerning between resting, propelling forward, and raising motions with the use of an IMU, the key indicators employed were the gyroscope's measurements along the x, y, and z axes. These values give insight into the rotational speed, offering clues about the motion's trajectory and force. Instead of applying a complex algorithmic model such as a decision tree, the categorization hinged on simplistic threshold-based logic. This method sets clear-cut boundaries in the gyroscopic readings to differentiate the motions: minimal readings for stationary state, prominent x-axis readings for the forward thrust, and z-axis readings for the upward motion. It leans on a heuristic-based system of classification, utilizing practical expertise to establish precise thresholds for each movement type, contrasting with a data-driven, model-based strategy like that of decision trees.
+
+
+Q4: In the advanced phase of IMU-based movement detection that encompassed resting, thrusting forward, lifting upwards, and rotating circularly, the gyroscope's axis-oriented measurements (x, y, and z) were again the focal metrics, similar to the earlier phase. The inclusion of circular rotation, notably around an axis such as the x-axis, called for a refined scrutiny of the gyroscope's output.
+
+Identifying circular rotation via an IMU hinges on the gyroscope's angular velocity data, pinpointing persistent rotational movement along a single axis, contrasted by negligible activity on the others. For rotations around the x-axis, pronounced and steady x-axis gyro readings are critical, while the y and z axes should maintain low and steady figures, indicating a predominant roll motion.
+
+Simple movements like the forward push and the upward lift are recognized by sharp variations in distinct axes readings (x for the push, z for the lift). In contrast, circular motion demands an assessment of rotational rhythm and uniformity over a duration. This may necessitate intricate logic or the recognition of patterns, as linear motions are straightforward to flag with elementary threshold-based logic, whereas rotational motions may call for an examination of ongoing and consistent gyrations to effectively separate them from linear movements or random fluctuations.
+
+
+
+
